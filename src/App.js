@@ -21,9 +21,11 @@ function App() {
   const [contact, setContact] = useState({title: 'Get in touch'});
 
   return (
-    <div className="App">
-      APP Place holder
-    </div>
+    <Router>
+      <div className="App">
+        APP Place holder
+      </div>
+    </Router>
   );
 }
 
