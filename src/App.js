@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {Container, Navbar, Nav} from 'react-bootstrap'
 import './App.css';
 
 function App() {
@@ -22,9 +23,20 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        APP Place holder
-      </div>
+        <Container fluid={true} className='p-0'>
+          <Navbar className="border-bottom" bg='transparent' expand='lg'>
+            <Navbar.Brand>Kirk Veitch</Navbar.Brand>
+            <Navbar.Toggle aria-controls='navbar-toggle' className="border-0"/>
+            <Navbar.Collapse id="navbar-toggle">
+              <Nav className="ml-auto">
+                <Link className="nav-link mr-auto" to='/'>Home</Link> 
+                <Link className="nav-link" to='/about'>About</Link> 
+                <Link className="nav-link" to='/contact'>Contact</Link> 
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+          
+        </Container>
     </Router>
   );
 }
