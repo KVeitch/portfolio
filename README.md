@@ -1,11 +1,11 @@
-## MY React Portfolio site.
+## My React Portfolio site.
 
 
 ## The Stack
-React
-React Router
-React Spring
-SendGrid
+React  
+React Router  
+React Spring  
+SendGrid  
 
 React Hooks
 
