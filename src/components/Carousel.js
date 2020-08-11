@@ -1,12 +1,10 @@
 import React from "react";
-
-import Card from "../components/Card";
-
-import devgrub from "../assets/images/devgrub.png";
-import youtube from "../assets/images/youtube.png";
-import evverest from "../assets/images/evverest.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+
+import Card from "../components/Card";
+import fitlit from "../assets/FitLit.png"
+
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -15,28 +13,28 @@ class Carousel extends React.Component {
       items: [
         {
           id: 0,
-          title: "Dev Grub",
+          title: "Project 1",
           subTitle: "The cookbook for developers",
-          imgSrc: devgrub,
+          imgSrc: fitlit,
           link: "https://devgrub.com",
           selected: false,
         },
         {
           id: 1,
-          title: "Garrett Love",
+          title: "Project 2",
           subTitle: "YouTube channel",
-          imgSrc: youtube,
+          imgSrc: fitlit,
           link: "https://www.youtube.com/channel/UCxSITxL2JbF229OGCqieVZw",
           selected: false,
         },
         {
           id: 2,
-          title: "Evverest",
+          title: "Project 3",
           subTitle: "A social network for developers",
-          imgSrc: evverest,
+          imgSrc: fitlit,
           link: "https://github.com/garrettlove8/evverest",
           selected: false,
-        },
+        }
       ],
     };
   }
