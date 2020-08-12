@@ -26,7 +26,7 @@ function App() {
   const [headerLinks, setHeaderLinks] = useState(headerData);
   const [home, setHome] = useState(homeData);
   const [about, setabout] = useState({ title: "About Me" });
-  const [contact, setContact] = useState({ title: "Get in touch" });
+  const [contact, setContact] = useState({ title: "Get in touch", subTitle:"Send a message and I'll get back to you shortly." });
 
   return (
     <Router>
@@ -57,7 +57,7 @@ function App() {
 
         <Route path="/" exact render={()=> <HomePage title={home.title} subTitle={home.subTitle} text={home.text}/>} />
         <Route path="/about" render={()=> <AboutPage title={about.title} />} />
-        <Route path="/contact" render={()=> <ContactPage title={contact.title} />} />
+        <Route path="/contact" render={()=> <ContactPage title={contact.title} subTitle={contact.subTitle} />} />
         
         <Footer />
       </Container>
