@@ -7,7 +7,8 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import githubLogo from "./assets/github.png";
-import linkedinLogo from "./assets/linkedin.png"
+import linkedinLogo from "./assets/linkedin.png";
+import email from "./assets/email.svg"
 import "./App.css";
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <Router>
-      <Container fluid={true} className="p-0 col-lg-8 md-8" >
+      <Container fluid={true} className="p-0 col-lg-10" md={8}>
         <Navbar className="border-bottom" bg="transparent" expand="lg">
           <Navbar.Brand>Kirk Veitch</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-toggle" className="border-0" />
@@ -50,6 +51,14 @@ function App() {
                     <img src={githubLogo} alt="GitHub logo" style={{height:"20px"}} />
                   </a>
                 </Link>
+                <a
+        href="mailto:kirkaveitch+ressite@gmail.com?subject=About%20your%20site"
+        class="w-inline-block"
+        ><img
+          src={email}
+          alt="email icon"
+          style={{height:"20px"}}  /></a
+      >
               </Container>
             </Nav>
           </Navbar.Collapse>
