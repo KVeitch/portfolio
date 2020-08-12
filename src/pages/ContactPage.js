@@ -20,14 +20,43 @@ class ContactPage extends Component {
 
   handleChange = (e) => {
     const target = e.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
 
     this.setState({
-        [name]: value
-    })
-  }
+      [name]: value,
+    });
+  };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.setState({
+      disabled: true,
+    });
+
+    Axios.post("http://localhost:3030/api/email", this.state)
+      .then((res) => {
+        if (res.data.success) {
+          this.setState({
+            disabled: false,
+            emailSent: true,
+          });
+        } else {
+          this.setState({
+            disabled: false,
+            emailSent: false,
+          });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+
+        this.setState({
+          disabled: false,
+          emailSent: false,
+        });
+      });
+  };
 
   render() {
     let { title, subTitle } = this.props;
@@ -81,10 +110,10 @@ class ContactPage extends Component {
             </Button>
 
             {this.state.emailSent === true && (
-              <p className="d-inline success-msg">Email Sent</p>
+              <p className="d-inline success-email-msg">Message Sent</p>
             )}
             {this.state.emailSent === false && (
-              <p className="d-inline err-msg">Email Not Sent</p>
+              <p className="d-inline err-email-msg">Sorry the was an error your message was not sent</p>
             )}
           </Form>
         </Content>
