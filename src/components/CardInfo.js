@@ -8,9 +8,16 @@ const CardInfo = ({title, subTitle, link}) => {
     <animated.div className="p-card-info" style={style}>
       <p className="p-card-title">{title}</p>
       <p className="p-card-sub-title">{subTitle}</p>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        View
-      </a>
+      <div>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          View the code
+        </a>
+      </div>
+      <div>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          View the site
+        </a>
+      </div>
     </animated.div>
   );
 };
