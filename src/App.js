@@ -30,7 +30,7 @@ function App() {
 
   return (
     <Router>
-      <Container fluid={true} className="p-0">
+      <Container fluid={true} className="p-0 col-lg-8 md-8" >
         <Navbar className="border-bottom" bg="transparent" expand="lg">
           <Navbar.Brand>Kirk Veitch</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-toggle" className="border-0" />
@@ -39,7 +39,7 @@ function App() {
               <Link className="nav-link mr-auto" to="/">Home</Link>
               <Link className="nav-link" to="/about">About</Link>
               <Link className="nav-link" to="/contact">Contact</Link>
-              <Container className="justify-content-start ml-auto p-0 m-0">
+              <Container className="justify-content-start ml-0 p-0 m-0">
                 <Link className="nav-link" to='www.linkedin.com' target="new">
                   <a href="https://www.linkedin.com/in/kirkaveitch" target="blank">
                   <img src={linkedinLogo} alt="LinkedIn logo" style={{height:"20px"}} />
