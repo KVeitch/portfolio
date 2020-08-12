@@ -18,6 +18,17 @@ class ContactPage extends Component {
     };
   }
 
+  handleChange = (e) => {
+    const target = e.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+        [name]: value
+    })
+  }
+
+
   render() {
     let { title, subTitle } = this.props;
     return (
