@@ -37,3 +37,14 @@ code {
   font-size: 16px;
   margin: 0px;
 }
+
+.success-email-msg {
+  color: #62ca87;
+  padding: 10px 15px;
+}
+
+
+.err-email-msg {
+  color: #b35043;
+  padding: 10px 15px;
+}
